@@ -1,18 +1,27 @@
-Copy ToggleNavigationBar folder to 
+Copy ToggleSoftKeys folder to 
 Android -> app -> src -> main -> java -> com -> name_of_your_project*
 
-Don't forget to change import paths of your module in ToggleSoftKeysModule and ToggleSoftKeysPackage and also add a name of current package to MainApplication.java file
+Don't forget to change import paths of your module in ToggleSoftKeysModule and ToggleSoftKeysPackage  files
 
-Well, now it's done.
-1. Run react-native server with npm start
-2. Run simulator or connect device
-3. Run android build
+Import module to MainApplication.java file with
+    import com.name_of_your_project.ToggleSoftKeys.ToggleSoftKeysPackage;
+    add package to package list
+
+`   protected List getPackages() {
+         return Arrays.asList(
+            ... ,
+            new ToggleSoftKeysPackage()
+        );
+      }
+`
+1. Start the react-native server with npm start command
+2. Build for android with react-native run-android
+3. Add module with import { NativeModules } from 'react-native'
+4. Use it
 
 Issues: 
 
-Build tested, if something went wrong true to clean android build or invalidate cache and restart Android studio.
-
-If it does not helped take a look at working example.
+Build tested, if something went wrong try to clean android build or invalidate cache and restart Android studio or look through example
 
 Feel free to ask any questions.
 
