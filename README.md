@@ -17,7 +17,8 @@ Import module to MainApplication.java file with
 1. Start the react-native server with npm start command
 2. Build for android with react-native run-android
 3. Add module with import { NativeModules } from 'react-native'
-4. Use it
+4. const { hide, show } =  NativeModules.ToggleSoftKeys;
+Use this callbacks to hide/show  android softkeys
 
 Issues: 
 
